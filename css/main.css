@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "poppins";
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "paralucent";
+  src: url("https://use.typekit.net/oek3jfu.css?ver=1.0.4");
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #36393a;
+}
+
+.header-wrapper {
+  padding: 1.5rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1e1f;
+}
+.header-wrapper .logo-wrapper {
+  font-family: "paralucent";
+  font-size: 4rem;
+  font-weight: 600;
+  color: #f2f0f1;
+}
+.header-wrapper .logo-wrapper .header-logo {
+  margin: 0;
+}
+.header-wrapper .logo-wrapper .header-logo-red {
+  background-color: #ba3535;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  margin: 0 0 0 0.25rem;
+}
+.header-wrapper .nav-bar {
+  font-family: "paralucent";
+  font-size: 2rem;
+}
+.header-wrapper .nav-bar .nav-bar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.header-wrapper .nav-bar .nav-bar-item {
+  margin: 0 0 0 2rem;
+}
+.header-wrapper .nav-bar .nav-bar-link {
+  color: #ba3535;
+  text-decoration: none;
+}
+.header-wrapper .nav-bar .nav-bar-link:hover {
+  color: #621c1c;
+}
+
+.footer-wrapper {
+  color: #f2f0f1;
+  text-align: center;
+}
+.footer-wrapper .footer-separator {
+  margin: 0 2.5em;
+}
+.footer-wrapper .footer-copyright {
+  margin: 3rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+.footer-wrapper .footer-logo {
+  background-color: #ba3535;
+  border-radius: 0.125rem;
+  padding: 0 0.1rem;
+  margin: 0 0 0 0.125rem;
+}
+
+.page-title {
+  color: #f2f0f1;
+  font-family: "paralucent";
+  font-size: 6rem;
+  text-align: center;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.movie-list .movie-card {
+  margin: 2rem;
+  flex-basis: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #f2f0f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.02, 0.6, 0.75, 0.7);
+}
+@media screen and (min-width: 768px) {
+  .movie-list .movie-card {
+    flex-basis: 15%;
+    flex-grow: 1;
+  }
+}
+.movie-list .movie-card:hover {
+  scale: 1.05;
+  box-shadow: 1.5rem 1rem 1rem #1d1e1f;
+}
+.movie-list .movie-card .movie-page-link {
+  text-decoration: none;
+}
+.movie-list .movie-card .movie-page-link .movie-splash {
+  flex-basis: 60%;
+  position: relative;
+}
+.movie-list .movie-card .movie-page-link .movie-splash .movie-poster {
+  object-fit: cover;
+  width: 100%;
+  height: 575px;
+}
+@media screen and (min-width: 768px) {
+  .movie-list .movie-card .movie-page-link .movie-splash .movie-poster {
+    height: 375px;
+  }
+}
+.movie-list .movie-card .movie-page-link .movie-splash .movie-vote-success {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: #1d1e1f;
+  color: #f2f0f1;
+  border: solid #4f964f;
+}
+.movie-list .movie-card .movie-page-link .movie-splash .movie-vote-warning {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: #1d1e1f;
+  color: #f2f0f1;
+  border: solid #b78e3c;
+}
+.movie-list .movie-card .movie-page-link .movie-splash .movie-vote-error {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  background-color: #1d1e1f;
+  color: #f2f0f1;
+  border: solid #ba3535;
+}
+.movie-list .movie-card .movie-page-link .movie-short-info {
+  display: flex;
+  flex-basis: 20%;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "paralucent";
+  margin: 0.75rem 1.25rem 1.6rem 1.25rem;
+  height: 10rem;
+}
+.movie-list .movie-card .movie-page-link .movie-short-info .movie-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.movie-list .movie-card .movie-page-link .movie-short-info .movie-date-release {
+  color: #000;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin: 0;
+}
+.movie-list .movie-card .movie-btn-basket {
+  flex-basis: 20%;
+  background-color: #ba3535;
+  color: #f2f0f1;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.single-movie-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.single-movie-container .single-movie-background {
+  position: relative;
+}
+.single-movie-container .single-movie-background-image {
+  background-size: cover;
+}
+.single-movie-container .single-movie-depiction {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.single-movie-container .single-movie-depiction .single-movie-poster {
+  flex-basis: 50%;
+}
+@media screen and (min-width: 768px) {
+  .single-movie-container .single-movie-depiction .single-movie-poster {
+    flex-basis: 25%;
+  }
+}
+.single-movie-container .single-movie-depiction .single-movie-info {
+  flex-basis: 50%;
+  margin: 0 0 0 12rem;
+}
+@media screen and (min-width: 768px) {
+  .single-movie-container .single-movie-depiction .single-movie-info {
+    flex-basis: 75%;
+  }
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-title {
+  display: flex;
+  align-items: end;
+  color: #f2f0f1;
+  margin: 0 0 4rem 0;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-title .single-movie-original-title {
+  font-size: 6rem;
+  font-family: "paralucent";
+  font-weight: 800;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-title .single-movie-year {
+  font-size: 4rem;
+  font-family: "paralucent";
+  font-weight: 200;
+  margin: 0 0 0.5rem 2rem;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-date {
+  display: flex;
+  align-items: end;
+  font-size: 1.5rem;
+  color: #f2f0f1;
+  font-family: "paralucent";
+  margin: 0 0 2rem 0;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-date .single-movie-release-date {
+  font-weight: 500;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-date .single-movie-category {
+  margin: 0 0 0 1rem;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-date .single-movie-duration {
+  margin: 0 0 0 1rem;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #f2f0f1;
+  font-family: "paralucent";
+  margin: 0 0 3rem 0;
+  font-size: 2rem;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-rating .single-movie-rating-bar {
+  color: #b78e3c;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-rating .single-movie-note {
+  font-weight: 300;
+  margin: 0 0 0 1rem;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-tagline {
+  font-size: 1.6rem;
+  font-family: "paralucent";
+  font-weight: 300;
+  font-style: italic;
+  color: #f2f0f1;
+  margin: 0 0 3rem 0;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-resume {
+  color: #f2f0f1;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-resume .single-movie-synopsis {
+  font-family: "paralucent";
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-resume .single-movie-overview {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

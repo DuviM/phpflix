@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Fiorella",
+    "email": "fiorella@boxydev.com",
+    "password": "$2a$10$ysdGA3fUDwUXIBD4aXQR1ukSHv5eINaKeSfS.gWwQdTfXMlKf1bFy"
+  },
+  {
+    "id": 2,
+    "name": "Matthieu",
+    "email": "matthieu@boxydev.com",
+    "password": "$2a$10$Q7KnFTlM3GJfORrC7y2KAeUd9Q.7lNzfX1JkU4/EDeSxYdTsdQReW"
+  },
+  {
+    "id": 3,
+    "name": "Marina",
+    "email": "marina@boxydev.com",
+    "password": "$2a$10$DiIXhtH1ope011vpoVbqjeVuUIrOYPlV3AsmmY0EUvQfpNyBhphqi"
+  },
+  {
+    "email": "babar@gmail.com",
+    "password": "$2a$10$OHOfhUQ9NBb08TpWWb/BjO83k0nNeYrh0hDDSdZQPc3Q2N8sQ2Aey",
+    "name": "Babar",
+    "id": 4
+  },
+  {
+    "email": "celeste@gmail.com",
+    "password": "$2a$10$6Wghu7iPytqi6d8Sh7rpfO2V5YxXuWmE7badtLTe6eaFNEDrMQj52",
+    "name": "Céleste",
+    "id": 5
+  },
+  {
+    "email": "zephir@gmail.com",
+    "password": "$2a$10$uLqrpOHun2ZS/fjcmJLUK.IKr0ulI3XnODNcwhivYIcM8V8k9QinS",
+    "name": "Zéphir",
+    "id": 6
+  }
+]

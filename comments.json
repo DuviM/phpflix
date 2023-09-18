@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "message": "Super film",
+    "createdAt": 1694056299636,
+    "movieId": 346698,
+    "userId": 3
+  },
+  {
+    "id": 2,
+    "message": "Encore un super film",
+    "createdAt": 1694058866636,
+    "movieId": 346698,
+    "userId": 2
+  },
+  {
+    "id": 3,
+    "message": "Et encore un super film",
+    "createdAt": 1694061463636,
+    "movieId": 346698,
+    "userId": 1
+  },
+  {
+    "userId": 4,
+    "message": "Un film coloré !",
+    "createdAt": 1694178398980,
+    "movieId": "976573",
+    "id": 4
+  },
+  {
+    "userId": 4,
+    "message": "Cool, les Power Rangers !",
+    "createdAt": 1694178429204,
+    "movieId": "667538",
+    "id": 5
+  },
+  {
+    "userId": 5,
+    "message": "Ce film c'est le feu !",
+    "createdAt": 1694545095096,
+    "movieId": "976573",
+    "id": 6
+  },
+  {
+    "userId": 5,
+    "message": "Merci mais je préfère des gants.",
+    "createdAt": 1694545181040,
+    "movieId": "532408",
+    "id": 7
+  },
+  {
+    "userId": 6,
+    "message": "Un film qui va faire des vagues !",
+    "createdAt": 1694545268514,
+    "movieId": "635910",
+    "id": 8
+  },
+  {
+    "userId": 6,
+    "message": "En 4D ça remue.",
+    "createdAt": 1694545294578,
+    "movieId": "635910",
+    "id": 9
+  },
+  {
+    "message": "ueue",
+    "userId": 1,
+    "createdAt": 1694636764667,
+    "movieId": "635910",
+    "id": 10
+  }
+]

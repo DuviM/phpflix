@@ -1,0 +1,338 @@
+@import "variables";
+@import "reset";
+
+
+
+@font-face{
+  font-family: "paralucent";
+  src: url("https://use.typekit.net/oek3jfu.css?ver=1.0.4");
+  font-family: 'Poppins', sans-serif; 
+}
+body{
+  background-color: $color-gray-600;
+}
+
+.header-wrapper{
+  padding: 1.5rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-gray-900;  
+
+  .logo-wrapper{
+    font-family: "paralucent";
+    font-size: 4rem;
+    font-weight: 600;
+    color: $color-white;
+
+    .header-logo{
+      margin: 0;
+
+    }
+    .header-logo-red{
+      background-color: $color-error;
+      border-radius: 0.25rem;
+      padding: 0 0.5rem;
+      margin: 0 0 0 0.25rem;
+    }
+  }
+  
+  .nav-bar{
+    font-family: "paralucent";
+    font-size: 2rem;
+    
+    .nav-bar-list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .nav-bar-item{
+      margin: 0 0 0 2rem;
+    }
+    
+    .nav-bar-link{
+      color: $color-error;
+      text-decoration: none;
+
+      &:hover{
+        color: $color-error-200;
+      }
+    }
+  }
+}
+
+.footer-wrapper{
+  color: $color-white;
+  text-align: center;
+
+  .footer-separator{
+    margin: 0 2.5em;      
+  }
+
+  .footer-copyright{
+    margin: 3rem 0 0 0;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+  .footer-logo{
+    background-color: $color-error;
+    border-radius: 0.125rem;
+    padding: 0 0.1rem;
+    margin: 0 0 0 0.125rem;
+  }
+}
+
+.page-title{
+  color: $color-white;
+  font-family: "paralucent";
+  font-size: 6rem;
+  text-align: center;
+}
+
+.movie-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .movie-card{
+    margin: 2rem;
+    flex-basis: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s;
+    transition-timing-function: cubic-bezier(.02,.6,.75,.7);
+
+    @media screen and (min-width: $md-breakpoint) {
+      flex-basis: 15%;
+      flex-grow: 1;
+    }
+
+    &:hover{
+      scale: (1.05);
+      box-shadow: 1.5rem 1rem 1rem $color-gray-900;
+    }
+
+    .movie-page-link{
+      text-decoration: none;
+
+      .movie-splash{
+        flex-basis: 60%;
+        position: relative;
+        
+        .movie-poster{
+          object-fit: cover;
+          width: 100%;
+          height: 575px;
+          
+          @media screen and (min-width: $md-breakpoint) {
+            height: 375px;
+          }
+        }
+
+        @mixin movie-vote {
+          position: absolute;
+          bottom: 2rem;
+          left: 2rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 5rem;
+          width: 5rem;
+          background-color: $color-gray-900;
+          color: $color-white;
+        }
+
+        .movie-vote-success{
+          @include movie-vote;
+          
+          border: solid $color-success;
+        }
+        .movie-vote-warning{
+          @include movie-vote;
+          
+          border: solid $color-warning;
+        }
+        .movie-vote-error{
+          @include movie-vote;
+          
+          border: solid $color-error;
+        }
+      }
+      .movie-short-info{
+        display: flex;
+        flex-basis: 20%;
+        flex-direction: column;
+        justify-content: space-between;      
+        font-family: "paralucent";
+        margin: 0.75rem 1.25rem 1.6rem 1.25rem;
+        height: 10rem;
+  
+        .movie-title{
+          color: $color-black;
+          font-weight: 700;
+          font-size: 2.5rem;
+          margin: 0;
+  
+        }
+        .movie-date-release{
+          color: $color-black;
+          font-weight: 300;
+          font-size: 1.6rem;
+          margin: 0;
+  
+        }
+      }
+    }
+    .movie-btn-basket{
+      flex-basis: 20%;
+      background-color: $color-error;
+      color: $color-white;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 0.5rem; 
+      
+    }
+  }
+}
+
+
+.single-movie-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  
+  .single-movie-background{
+    position: relative;    
+  }
+
+  .single-movie-background-image{
+    background-size: cover;     
+  }
+  
+
+  .single-movie-depiction{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .single-movie-poster{
+      flex-basis: 50%;
+      
+      @media screen and (min-width: $md-breakpoint) {
+        flex-basis: 25%;
+        
+      }
+    }
+    
+    .single-movie-info{
+      flex-basis: 50%;
+      margin: 0 0 0 12rem;
+
+      @media screen and (min-width: $md-breakpoint) {
+        flex-basis: 75%;
+      }
+
+      .single-movie-title{
+        display: flex;
+        align-items: end;
+        color: $color-white;
+        margin: 0 0 4rem 0;
+
+        .single-movie-original-title{
+          font-size: 6rem;
+          font-family: "paralucent";
+          font-weight: 800;
+        }
+
+        .single-movie-year{
+          font-size: 4rem;
+          font-family: "paralucent";
+          font-weight: 200;
+          margin: 0 0 .5rem 2rem;
+        }
+      }
+
+      .single-movie-date{
+        display: flex;
+        align-items: end;
+        font-size: 1.5rem;
+        color: $color-white;
+        font-family: "paralucent";
+        margin: 0 0 2rem 0;
+        
+        .single-movie-release-date{
+          font-weight: 500;
+        }
+        
+        .single-movie-category{
+          margin: 0 0 0 1rem;
+        }
+        
+        .single-movie-duration{
+          margin: 0 0 0 1rem;
+        }
+      }
+      
+      .single-movie-rating{
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        color: $color-white;
+        font-family: "paralucent";
+        margin: 0 0 3rem 0;
+        font-size: 2rem;
+        
+        .single-movie-rating-bar{
+          color: $color-warning;
+        }
+
+        .single-movie-note{
+          font-weight: 300;
+          margin: 0 0 0 1rem;
+        }
+      }
+
+      .single-movie-tagline{
+        font-size: 1.6rem;
+        font-family: "paralucent";
+        font-weight: 300;
+        font-style: italic;
+        color: $color-white;
+        margin: 0 0 3rem 0;
+      }
+
+      .single-movie-resume{
+        color: $color-white;
+
+        .single-movie-synopsis{
+          font-family: "paralucent";
+          font-size: 2rem;
+          font-weight: 500;
+          margin: 0 0 1rem 0;
+        }
+  
+        .single-movie-overview{
+          font-size: 1.6rem;
+          margin: 0;        
+        }
+      }
+
+    }
+  }
+}
