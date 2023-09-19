@@ -904,7 +904,7 @@
     "poster_path": "https://image.tmdb.org/t/p/w500/pBN6k6aB9toOdr95sG3q60frkX7.jpg",
     "release_date": "2023-02-17",
     "revenue": 0,
-    "runtime": 0,
+    "runtime":0, 
     "status": "Released",
     "tagline": "",
     "title": "Sasaki and Miyano : Graduation Arc",

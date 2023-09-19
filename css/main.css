@@ -216,25 +216,22 @@ body {
   padding: 0.5rem;
 }
 
-.single-movie-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-}
 .single-movie-container .single-movie-background {
   position: relative;
+  overflow: hidden;
 }
-.single-movie-container .single-movie-background-image {
-  background-size: cover;
-}
-.single-movie-container .single-movie-depiction {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+.single-movie-container .single-movie-backdrop-image {
+  width: 100%;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+}
+.single-movie-container .single-movie-depiction {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
   padding: 6rem;
   display: flex;
   justify-content: space-between;
@@ -301,7 +298,19 @@ body {
   font-size: 2rem;
 }
 .single-movie-container .single-movie-depiction .single-movie-info .single-movie-rating .single-movie-rating-bar {
-  color: #b78e3c;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.single-movie-container .single-movie-depiction .single-movie-info .single-movie-rating .single-movie-rating-bar .single-movie-rating-bar-note {
+  mask-image: url(../img/ratingStars.png);
+  background-color: #b78e3c;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 .single-movie-container .single-movie-depiction .single-movie-info .single-movie-rating .single-movie-note {
   font-weight: 300;
